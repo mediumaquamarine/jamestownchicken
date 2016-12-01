@@ -8,6 +8,7 @@ angular.module('jamestownChicken')
       .state('home', {
         url: '/home',
         templateUrl: '../../templates/home/index.html',
+        controller: 'MainController as main',
         css: '../../content/css.css'
       })
   }])
