@@ -1,0 +1,1 @@
+angular.module('jamestownChicken', ['ui.router']);
