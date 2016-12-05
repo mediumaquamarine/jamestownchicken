@@ -1,5 +1,5 @@
 angular.module('jamestownChicken.main', [])
-  .controller('MainController', function($rootScope) {
+  .controller('MainController',['$rootScope', function($rootScope) {
     $rootScope.bg = true;
 
-  });
+  }]);

@@ -1,3 +1,3 @@
 "use strict";angular.module("jamestownChicken",["ui.router","jamestownChicken.main"]);
-"use strict";angular.module("jamestownChicken.main",[]).controller("MainController",function(n){n.bg=!0});
 "use strict";angular.module("jamestownChicken").config(["$stateProvider","$urlRouterProvider",function(e,t){t.otherwise("/home"),e.state("home",{url:"/home",templateUrl:"../../templates/home/index.html",controller:"MainController as main",css:"../../content/css.css"})}]);
+"use strict";angular.module("jamestownChicken.main",[]).controller("MainController",["$rootScope",function(o){o.bg=!0}]);
