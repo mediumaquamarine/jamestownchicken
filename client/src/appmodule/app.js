@@ -1,1 +1,1 @@
-angular.module('jamestownChicken', ['ui.router', 'jamestownChicken.main']);
+angular.module('jamestownChicken', ['ui.router']);
