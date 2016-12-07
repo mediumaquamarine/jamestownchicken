@@ -1,5 +1,5 @@
 angular.module('jamestownChicken')
-  .controller('SignupController',['$rootScope', '$http', '$window', function($rootScope, $http, $window) {
+  .controller('SignupController',['$rootScope', '$http', '$window','$state', function($rootScope, $http, $window, $state) {
     this.user;
     this.password;
     this.email;
@@ -15,13 +15,13 @@ angular.module('jamestownChicken')
             alert('email already in use, please choose a new one');
             $state.go('signup');
           }
-
+          $window.localStorage.accessToken = res.data.token;
+      })
           this.user = '';
           this.password='';
           this.email='';
-          $window.localStorage.accessToken = res.data.token;
           $state.go('home');
-        })
+
     };
 
   }]);
