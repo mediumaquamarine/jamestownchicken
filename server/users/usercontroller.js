@@ -33,7 +33,7 @@ module.exports = {
         next(error);
       });
   },
-
+  //used to create new user
   signup: function (req, res, next) {
     var username = req.body.username;
     var password = req.body.password;
@@ -45,6 +45,7 @@ module.exports = {
         if (user) {
           res.json({duplicateUser: true});
         }
+        //make sure email is not already in use
       findUser({email: email})
         .then(function (email) {
           if (email) {
@@ -52,9 +53,19 @@ module.exports = {
           }
         })
       })
-      .then(function (user) {
+        //if both checks above pass, create the new user in the database
+      .then(function() {
+        return createUser({
+            username: username,
+            password: password,
+            email: email,
+            points: 0
+          })
+      })
+      // and send them a token
+      .then(function () {
         // create token to send back for auth
-        var token = jwt.encode(user, config.secrets.jwt);
+        var token = jwt.encode(username, config.secrets.jwt);
         res.json({token: token});
       })
       .fail(function (error) {
