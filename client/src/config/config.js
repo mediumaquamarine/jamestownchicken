@@ -18,4 +18,11 @@ angular.module('jamestownChicken')
         controller: 'SignupController as signup',
         css: '../../content/css.css'
       })
+
+      .state('signin', {
+        url: '/signin',
+        templateUrl: '../../templates/signin/signin.html',
+        controller: 'SigninController as signin',
+        css: '../../content/css.css'
+      })
   }])
