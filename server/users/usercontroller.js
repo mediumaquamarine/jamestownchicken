@@ -16,7 +16,7 @@ module.exports = {
     findUser({username: username})
       .then(function (user) {
         if (!user) {
-          next(new Error('User does not exist'));
+          res.json({usernone: true});
         } else {
           return user.comparePasswords(password)
             .then(function (foundUser) {

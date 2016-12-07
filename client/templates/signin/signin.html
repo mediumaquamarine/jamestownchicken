@@ -1,0 +1,19 @@
+<div>
+
+  <form class = "form-signin has-success" ng-submit="signin.submit()" >
+    <h2 class="form-signin-heading">Sign in</h2>
+
+    <label for="inputUser" class="sr-only">User Name </label>
+    <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type='input' id="inputUser" class="form-control" placeholder="username (letters and numbers only)" ng-model="signin.user" name='text' pattern="[a-z0-9]+" required autofocus maxlength="15" ></input>
+
+
+    <label for="inputPass" class="sr-only">Password</label>
+    <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="password" id="inputPass" class="form-control" placeholder="password min 6, 1 cap, 1 small, 1 num" ng-model="signin.password" name='text' required maxlength="15" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" ></input>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+  </form>
+
+  <div align ="center">
+    <button class="btn btn-warning" ui-sref="forgotpassword">Forgot password</button><br>
+  </div>
+
+</div>
