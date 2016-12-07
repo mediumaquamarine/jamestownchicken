@@ -1,6 +1,6 @@
 angular.module('jamestownChicken')
 
-  .factory('Auth', ['$http', '$location', '$window', '$state', function($http, $location, $window, $state) {
+  .factory('Auth', ['$http', '$location', '$window', '$state','$rootScope', function($http, $location, $window, $state, $rootScope) {
     var signup = function(user, password, email) {
       $http.post('api/signup', {username: user, password: password, email: email})
         .then(function(res) {
@@ -14,7 +14,8 @@ angular.module('jamestownChicken')
           }
         $window.localStorage.accessToken = res.data.token;
       })
-
+      //setting loggedIn to true makes the my account and signout buttons appear on the navbar
+      $rootScope.loggedIn = true;
       $state.go('home');
 
     };
@@ -29,7 +30,8 @@ angular.module('jamestownChicken')
 
         $window.localStorage.accessToken = res.data.token;
       })
-
+      //setting loggedIn to true makes the my account and signout buttons appear on the navbar
+      $rootScope.loggedIn = true;
       $state.go('home');
 
     };

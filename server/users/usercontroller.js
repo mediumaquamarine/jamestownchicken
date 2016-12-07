@@ -15,6 +15,7 @@ module.exports = {
 
     findUser({username: username})
       .then(function (user) {
+        //if no user found, then usernone: true is sent back to Auth.signin is services.js
         if (!user) {
           res.json({usernone: true});
         } else {
