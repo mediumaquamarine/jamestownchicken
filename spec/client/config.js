@@ -21,9 +21,9 @@ describe('MainController', function () {
 
   }));
 
-  it('should set $rootScope.bg to true', function () {
+  it('should set $rootScope.loggedIn to true', function () {
     createController();
-    expect($rootScope.bg).to.equal(true);
+    expect($rootScope.loggedIn).to.equal(true);
   });
 
 

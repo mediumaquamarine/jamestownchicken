@@ -1,4 +1,4 @@
 angular.module('jamestownChicken', ['ui.router'])
-.run(['$rootScope', function($rootScope) {
-  $rootScope.loggedIn = false;
-}])
+  .run(['Auth', '$window','$rootScope', function(Auth, $window, $rootScope) {
+    $rootScope.loggedIn = Auth.isAuthLite();
+  }])

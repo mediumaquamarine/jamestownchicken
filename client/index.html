@@ -39,6 +39,7 @@
 
         <div ng-show="loggedIn"><button type="button" class="btn btn-danger navbar-btn navbar-right" ng-click='main.out()'>Sign out</button>
         <button type="button" class="btn btn-primary navbar-btn navbar-right" ng-click='main.out()'>My Account</button></div>
+        <div ng-hide="loggedIn"><button type="button" class="btn btn-success navbar-btn navbar-right" ui-sref="signin">
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>

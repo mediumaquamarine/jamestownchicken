@@ -35,8 +35,14 @@ angular.module('jamestownChicken')
       $state.go('home');
 
     };
+
+    var isAuthLite = function () {
+      return !!$window.localStorage.getItem('accessToken');
+    };
+
     return {
       signup : signup,
-      signin: signin
+      signin: signin,
+      isAuthLite : isAuthLite
     };
   }])
