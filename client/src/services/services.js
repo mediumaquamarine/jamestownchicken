@@ -36,6 +36,11 @@ angular.module('jamestownChicken')
 
     };
 
+    var signout = function() {
+      $window.localStorage.accessToken = '';
+      $rootScope.loggedIn = false;
+    }
+
     var isAuthLite = function () {
       return !!$window.localStorage.getItem('accessToken');
     };
@@ -43,6 +48,7 @@ angular.module('jamestownChicken')
     return {
       signup : signup,
       signin: signin,
-      isAuthLite : isAuthLite
+      isAuthLite : isAuthLite,
+      signout: signout
     };
   }])

@@ -11,7 +11,7 @@
 <!-- Begin nav bar -->
 
 
-<div>
+<div ng-controller="MainController as main">
   <nav ng-show="bg" class="navbar navbar-default">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -38,8 +38,8 @@
 
 
         <div ng-show="loggedIn"><button type="button" class="btn btn-danger navbar-btn navbar-right" ng-click='main.out()'>Sign out</button>
-        <button type="button" class="btn btn-primary navbar-btn navbar-right" ng-click='main.out()'>My Account</button></div>
-        <div ng-hide="loggedIn"><button type="button" class="btn btn-success navbar-btn navbar-right" ui-sref="signin">
+        <button type="button" class="btn btn-primary navbar-btn navbar-right">My Account</button></div>
+        <div ng-hide="loggedIn"><button type="button" class="btn btn-info navbar-btn navbar-right" ui-sref="signin">Sign In</button>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
