@@ -3,7 +3,7 @@ var _ = require('lodash');
 var config = {
   dev: 'development',
   prod: 'production',
-  port: process.env.Port || 8080,
+  port: process.env.PORT || 8080,
   expiresIn: '24h',
   secrets: {
     jwt: process.env.JWT || 'silence'
