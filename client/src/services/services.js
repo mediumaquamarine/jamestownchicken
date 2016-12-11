@@ -40,7 +40,7 @@ angular.module('jamestownChicken')
       $window.localStorage.accessToken = '';
       $rootScope.loggedIn = false;
     }
-
+    //simply checks that a token exist in local storage, only used for light authorization where authorization doesn't really matter, like showing or hiding a button
     var isAuthLite = function () {
       return !!$window.localStorage.getItem('accessToken');
     };
