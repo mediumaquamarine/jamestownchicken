@@ -11,6 +11,10 @@
 
     <label for="inputPass" class="sr-only">Password</label>
     <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="password" id="inputPass" class="form-control" placeholder="password min 6, 1 cap, 1 small, 1 num" ng-model="signup.password" name='text' required maxlength="15" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" ></input>
+
+    <label for="retypePass" class="sr-only">Re-type Password</label>
+    <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="password" id="retypePass" class="form-control" placeholder="re-type password" ng-model="signup.retype" name='text' required maxlength="15" form-validator="signup.password != signup.retype ? 'Passwords don\'t match' : ''" ></input>
+
     <button class="btn btn-lg btn-primary btn-block" type="submit">Create</button>
   </form>
 
