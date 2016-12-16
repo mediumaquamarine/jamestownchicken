@@ -18,6 +18,8 @@ module.exports = function(config) {
       'client/lib/angular/angular.js',
       'client/lib/angular-ui-router/release/angular-ui-router.js',
       'node_modules/angular-mocks/angular-mocks.js',
+      'client/src/appmodule/*.js',
+      'client/src/services/*.js',
       'client/src/controller/*.js',
       'spec/**/*.js'
     ],

@@ -25,4 +25,11 @@ angular.module('jamestownChicken')
         controller: 'SigninController as signin',
         css: '../../content/css.css'
       })
+
+      .state('passwordreset', {
+        url: '/passwordreset',
+        templateUrl: '../../templates/passwordreset/passwordreset.html',
+        controller: 'PassWordReset as reset',
+        css: '../../content/css.css'
+      })
   }])
