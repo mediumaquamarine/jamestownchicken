@@ -4,9 +4,7 @@ angular.module('jamestownChicken')
       require: 'ngModel',
       link: function(scope, elm, attrs, ctl) {
         scope.$watch(attrs['formValidator'], function (errorMsg) {
-          console.log('helloy');
           elm[0].setCustomValidity(errorMsg);
-          console.log(scope);
           ctl.$setValidity('formValidator', errorMsg ? false: true);
         });
       }
